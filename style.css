@@ -55,6 +55,9 @@ body #jeu #mot #bouttons button {
 @media only screen and (max-width: 885px) {
   body #jeu {
     display: contents;
+    #mot{
+	margin-left : 20px
+    } 
   }
 }
 
