@@ -1,2 +1,1 @@
 # bonhomme-pendu
-Deuxième version
