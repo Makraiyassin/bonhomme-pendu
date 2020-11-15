@@ -1,0 +1,53 @@
+body {
+  color: white;
+  background: url(img/fond.png);
+  background-size: cover;
+  font-family: "Black Ops One", cursive;
+}
+body h1 {
+  text-align: center;
+  font-size: 40px;
+}
+body #jeu {
+  width: 70%;
+  margin: auto;
+  display: flex;
+}
+body #jeu #timer {
+  width: 200px;
+  height: 150px;
+  background: url(img/gamboy.png);
+  background-size: 200px;
+  margin-left: 90px;
+}
+body #jeu #timer p {
+  margin-top: 55px;
+  margin-left: 90px;
+  position: absolute;
+}
+body #jeu #bonhomme {
+  width: 500px;
+  height: 700px;
+}
+body #jeu #mot {
+  width: 500px;
+  height: 700px;
+  font-size: 34px;
+}
+body #jeu #mot #code {
+  text-align: justify;
+}
+body #jeu #mot #bouttons {
+  margin-top: 10px;
+}
+body #jeu #mot #bouttons button {
+  border-radius: 50%;
+  margin-top: 20px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  background-color: blue;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
