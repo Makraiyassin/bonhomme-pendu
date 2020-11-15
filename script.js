@@ -5,11 +5,19 @@ let mots = ["VOITURE", "TELEPHONE", "SAC","REUNION", "POMME", "SOURIS","ABEILLE"
 let mot = mots[Math.floor(Math.random()*mots.length)]
 let arMot = mot.split("")
 
-let seconde = 150
-
-setInterval(function() {
-    document.getElementById("time").innerText = seconde--
-},1000)
+function gameover(){
+    clearInterval(chrono)
+    document.getElementById("time").innerText = "LOSE"
+    document.getElementById("bouttons").remove()
+    document.getElementById("img").setAttribute("src","img/07.png")
+    document.getElementById("code").insertAdjacentHTML("afterend",'<div id = "gameOver"><p style = "margin: 5px 0px; font-size: 25px"> Vous avez perdu </p></div>') 
+    document.getElementById("gameOver").insertAdjacentHTML("beforebegin",'<img src="img/mariolose.gif" style = "margin-top: 15px">') 
+    document.getElementById("gameOver").insertAdjacentHTML("beforeend",'<p style = "margin: 0px; font-size: 20px"> Le mot secret était: '+mot+'</p>') 
+    document.getElementById("gameOver").insertAdjacentHTML("beforeend",'<button id = "rejouer" style = "text-align: center; background-color: blue; color: white; border-radius: 10%; margin-left: 15%"> Rejouer </button>') 
+    document.getElementById("rejouer").addEventListener("click", function(){
+        window.location.reload()
+    })    
+}
 
 console.log(mot);
 console.log(arMot);
@@ -42,15 +50,8 @@ document.querySelectorAll("button").forEach(function(button) {
         }
 
         if(img == 8){
-            document.getElementById("bouttons").remove()
-            document.getElementById("img").setAttribute("src","img/07.png")
-            document.getElementById("code").insertAdjacentHTML("afterend",'<div id = "gameOver"><p style = "margin: 5px 0px; font-size: 25px"> Vous avez perdu </p></div>') 
-            document.getElementById("gameOver").insertAdjacentHTML("beforebegin",'<img src="img/mariolose.gif" style = "margin-top: 15px">') 
-            document.getElementById("gameOver").insertAdjacentHTML("beforeend",'<p style = "margin: 0px; font-size: 20px"> Le mot secret était: '+mot+'</p>') 
-            document.getElementById("gameOver").insertAdjacentHTML("beforeend",'<button id = "rejouer" style = "text-align: center; background-color: blue; color: white; border-radius: 10%; margin-left: 15%"> Rejouer </button>') 
-            document.getElementById("rejouer").addEventListener("click", function(){
-                window.location.reload()
-            })
+
+            gameover()
             // alert("la partie est terminée")
             // window.location.reload()
         }
@@ -61,6 +62,7 @@ document.querySelectorAll("button").forEach(function(button) {
             answer += document.querySelectorAll("span")[i].innerText
         }
         if (answer == mot) {
+            clearInterval(chrono)
             document.getElementById("bouttons").remove()
             document.getElementById("code").insertAdjacentHTML("afterend",'<div id = "win"><p style = "margin: 5px 0px; font-size: 25px"> BRAVO! </p></div>') 
             document.getElementById("win").insertAdjacentHTML("beforeend",'<button id = "rejouer" style = "text-align: center; background-color: blue; color: white; border-radius: 10%; margin-left: 15%"> Rejouer </button>') 
@@ -76,5 +78,16 @@ document.querySelectorAll("button").forEach(function(button) {
         console.log(answer);
     })
 })
+
+let seconde = 100
+
+let chrono = setInterval(function() {
+    if (seconde > 0) {
+    document.getElementById("time").innerText = seconde--
+    }    
+    if (seconde == 0){
+        gameover()
+    }
+},1000)
 
 
