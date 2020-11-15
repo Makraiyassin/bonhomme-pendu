@@ -50,4 +50,19 @@ body #jeu #mot #bouttons button {
   color: white;
 }
 
+@media only screen and (max-width: 1051px) {
+  body #jeu {
+    width: 100%;
+    margin: 0;
+  }
+  body #jeu #bonhomme {
+    height: auto;
+  }
+}
+@media only screen and (max-width: 885px) {
+  body #jeu {
+    display: contents;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
