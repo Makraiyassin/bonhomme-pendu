@@ -56,7 +56,10 @@ body #jeu #mot #bouttons button {
   body #jeu {
     display: contents;
     #mot{
-	margin-left : 50px
+	margin-left : 50px;
+        #code{
+	   text-align : center;
+	} 
     } 
   }
 }
