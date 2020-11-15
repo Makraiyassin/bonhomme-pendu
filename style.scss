@@ -9,10 +9,8 @@ body{
         font-size: 40px;
     }
     #jeu{
-
-        width: 70%;
-        margin: auto;
         display: flex;
+        justify-content: center;
         #timer{
             width: 200px;
             height: 150px;
@@ -26,17 +24,12 @@ body{
             }
         }
         #bonhomme{
-            
-            width: 500px;
             height: 700px;
         }
 
         #mot{
-
-            width: 500px;
             height: 700px;
             font-size: 34px;
-
             #code{
                 text-align: justify;
             }
@@ -63,9 +56,6 @@ body{
 @media only screen and (max-width: 1051px) {
     body{    
         #jeu{
-            width: 100%;
-            margin : 0;
-                
             #bonhomme{
                 height: auto;
             }
