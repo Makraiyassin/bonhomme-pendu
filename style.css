@@ -53,12 +53,21 @@ body #jeu #mot #bouttons button {
   }
 }
 @media only screen and (max-width: 885px) {
-  body #jeu {
+  #jeu {
     display: contents;
   }
+<<<<<<< HEAD
   body #jeu #mot {
     margin-left: 90px;
   }
+=======
+  #mot{
+    margin-left : 50px;
+  } 
+  #code{
+    text-align : center;
+  } 
+>>>>>>> e34cd581aac294d3a697e2c5f0f230077b7a111d
 }
 
 /*# sourceMappingURL=style.css.map */
