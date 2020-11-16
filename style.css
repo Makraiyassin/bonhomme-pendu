@@ -56,6 +56,9 @@ body #jeu #mot #bouttons button {
   body #jeu {
     display: contents;
   }
+  body #jeu #mot {
+    margin-left: 90px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
