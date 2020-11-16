@@ -1,5 +1,5 @@
 let img = 1;
-document.getElementById("bonhomme").insertAdjacentHTML("afterbegin",'<img id="img" src="img/0'+(img++)+'.png" alt="bonhomme" style = "margin-left: 20%" width= "230px">')
+document.getElementById("bonhomme").insertAdjacentHTML("afterbegin",'<img id="img" src="img/0'+(img++)+'.png" alt="bonhomme" style = "margin-left: 90px" width= "230px">')
 
 let mots = ["VOITURE", "TELEPHONE", "SAC","REUNION", "POMME", "SOURIS","ABEILLE","MIEL","RAT","CHIEN","CHAT","BEBE","MAMAN"]
 let mot = mots[Math.floor(Math.random()*mots.length)]
